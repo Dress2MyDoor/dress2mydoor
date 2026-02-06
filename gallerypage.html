@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Dress2MyDoor</title>
+    <link rel="preconnect" href="http://localhost:5000">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">D2MD</a></li>
+                <li><a href="gallerypage.html">Gallery</a></li>
+                <li><a href="eventspage.html">Events</a></li>
+                <li><a href="allwaysbridalpage.html">Allways Bridal</a></li>
+                <li><a href="contactpage.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Our Dress Collection</h2>
+        <!-- Filter Controls -->
+        <div class="filter-section">
+            <h3>Filter by:</h3>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="type-filter">Type</label>
+                    <select id="type-filter">
+                        <option value="">All Types</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="casual">Casual</option>
+                        <option value="evening">Evening</option>
+                        <option value="cocktail">Cocktail</option>
+                        <option value="party">Party</option>
+                        <option value="prom">Prom</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="size-filter">Size</label>
+                    <select id="size-filter">
+                        <option value="">All Sizes</option>
+                        <option value="xs">XS</option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="colour-filter">Colour</label>
+                    <select id="colour-filter">
+                        <option value="">All Colours</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                        <option value="black">Black</option>
+                        <option value="blue">Blue</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </div>
+                <button id="reset-filters" class="reset-btn">Reset Filters</button>
+            </div>
+        </div>
+        <div id="gallery-loading" class="gallery-loading" aria-hidden="true"></div>
+        <div class="gallery-grid" id="gallery-grid">
+        
+            <div class="gallery-item">
+                <img src="fbdscoleyharrop-209(1).jpg" alt="Elegant Wedding Dress">
+                <p>Elegant Wedding Dress</p>
+                <p class="price">$299</p>
+            </div>
+            <div class="gallery-item">
+                <img src="fbdscoleyharrop-205(1).jpg" alt="Casual Summer Dress">
+                <p>Casual Summer Dress</p>
+                <p class="price">$149</p>
+            </div>
+            <div class="gallery-item">
+                <img src="fbdscoleyharrop-100(1).jpg" alt="Evening Gown">
+                <p>Evening Gown</p>
+                <p class="price">$399</p>
+            </div>
+            <div class="gallery-item">
+                <img src="fbdscoleyharrop-213(1).jpg" alt="Cocktail Dress">
+                <p>Cocktail Dress</p>
+                <p class="price">$199</p>
+            </div>
+            <div class="gallery-item">
+                <img src="fbdscoleyharrop-245(1).jpg" alt="Party Dress">
+                <p>Party Dress</p>
+                <p class="price">$179</p>
+            </div>
+            <div class="gallery-item">
+                <img src="fbdscoleyharrop-253(1).jpg" alt="Prom Dress">
+                <p>Prom Dress</p>
+                <p class="price">$349</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js" defer></script>
+
+</body>
+</html>

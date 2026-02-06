@@ -1,0 +1,1079 @@
+/* styles.css */
+/* Dress2MyDoor Brand Colors: Blush Pink #D4A5A5, Deep Burgundy #5C3D3D, Accent Gold #C9A961 */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #999a81;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d1c4ae;
+}
+
+.hero {
+    background: linear-gradient(rgba(232, 229, 224, 0.8), rgba(232, 229, 224, 0.3)), url('fbdscoleyharrop-205(1).jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #999a81;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Page-scoped header/banner/footer for Allways Bridal pages only */
+/* Uses :has to target pages that contain the #allways-bridal section */
+body:has(#allways-bridal) header {
+    background-color: #cdc0cb;
+    color: #e8e5e0;
+}
+
+body:has(#allways-bridal) header nav ul li a {
+    color: #f2e9dc;
+}
+
+body:has(#allways-bridal) header nav ul li a:hover {
+    color: #3f2a4c;
+}
+
+body:has(#allways-bridal) .hero {
+    background: linear-gradient(rgba(176,122,170,0.85), rgba(176,122,170,0.45)), url('fbdscoleyharrop-205.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f2e9dc;
+}
+
+body:has(#allways-bridal) .hero-text h1 {
+    color: #f2e9dc;
+}
+
+body:has(#allways-bridal) .cta-button {
+    background-color: #cdc0cb;
+    border-color: #cdc0cb;
+    color: #3f2a4c;
+}
+
+body:has(#allways-bridal) .cta-button:hover {
+    background-color: #3f2a4c;
+}
+
+body:has(#allways-bridal) footer {
+    background-color: #bec1b9;
+    color: #cdc0cb;
+    padding: 30px 0;
+}
+
+body:has(#allways-bridal) footer a {
+    color: #cdc0cb;
+}
+
+.cta-button {
+    background-color: #999a81;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #4c6d4f;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #e8e5e0;
+}
+
+#gallery h2 {
+    color: #4c6d4f;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#gallery > p {
+    color: #999a81;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* Gallery Filter Section */
+.filter-section {
+    margin-bottom: 40px;
+}
+
+.filter-section h3 {
+    color: #4c6d4f;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filter-group label {
+    color: #4c6d4f;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.filter-group select {
+    padding: 10px 15px;
+    border: 2px solid #999a81;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    min-width: 150px;
+}
+
+.filter-group select:hover {
+    border-color: #4c6d4f;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #4c6d4f;
+    box-shadow: 0 0 5px rgba(76, 109, 79, 0.3);
+}
+
+.reset-btn {
+    background-color: #999a81;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: fit-content;
+    margin-top: 20px;
+}
+
+.reset-btn:hover {
+    background-color: #4c6d4f;
+}
+
+.no-results {
+    color: #999a81;
+    font-size: 1.1rem;
+    padding: 40px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Gallery loading spinner */
+#gallery-loading {
+    width: 48px;
+    height: 48px;
+    margin: 10px auto 20px;
+    border-radius: 50%;
+    border: 5px solid rgba(0,0,0,0.08);
+    border-top-color: rgba(0,0,0,0.35);
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+/* show when aria-hidden is false */
+#gallery-loading[aria-hidden="false"] {
+    display: block;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Slight image fade-in for smoother loading */
+.gallery-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    transition: opacity 0.35s ease-in;
+}
+
+.gallery-item img[src] {
+    opacity: 1;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(232, 229, 224, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.gallery-item p {
+    padding: 15px;
+    font-weight: bold;
+    color: #a49c8c;
+}
+
+.gallery-item .price {
+    color: #999a81;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Contact Form */
+#contact {
+    padding: 60px 40px;
+    background-color: #e8e5e0;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #4c6d4f;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-intro {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4c6d4f;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 0;
+    border-radius: 5px;
+    border: 2px solid #999a81;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #C9A961;
+}
+
+form button {
+    background-color: #999a81;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #4c6d4f;
+}
+
+/* Booking System */
+.booking-container {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.booking-container h3 {
+    color: #4c6d4f;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.booking-intro {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+#booking-form {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+#booking-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4c6d4f;
+    text-align: left;
+}
+
+#booking-form input,
+#booking-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 0;
+    border-radius: 5px;
+    border: 2px solid #999a81;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+#booking-form input:focus,
+#booking-form textarea:focus {
+    outline: none;
+    border-color: #C9A961;
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.time-slot-btn {
+    padding: 12px 15px;
+    border: 2px solid #999a81;
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.time-slot-btn:hover {
+    border-color: #4c6d4f;
+    color: #4c6d4f;
+}
+
+.time-slot-btn.active {
+    background-color: #4c6d4f;
+    color: white;
+    border-color: #4c6d4f;
+}
+
+.booking-submit {
+    background-color: #999a81;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.booking-submit:hover {
+    background-color: #4c6d4f;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .filter-group select {
+        width: 100%;
+    }
+
+    .reset-btn {
+        width: 100%;
+    }
+
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .booking-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        margin-right: 15px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 300px;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    #gallery,
+    #contact {
+        padding: 30px 20px;
+    }
+
+    #gallery h2,
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        max-height: 400px;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    #gallery,
+    #contact {
+        padding: 20px;
+    }
+}
+
+/* Events Section */
+#events {
+    padding: 60px 40px;
+    background-color: #e8e5e0;
+    text-align: center;
+}
+
+#events h2 {
+    color: #4c6d4f;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.events-intro {
+    color: #999a81;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-item {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.event-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(232, 229, 224, 0.2);
+}
+
+.event-header {
+    border-bottom: 2px solid #999a81;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.event-header h3 {
+    color: #4c6d4f;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* About Us Section */
+#about {
+    padding: 60px 40px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    color: #4c6d4f;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#about p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Info Section */
+#info {
+    padding: 60px 40px;
+    background-color: #e8e5e0;
+    text-align: center;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-box {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(232, 229, 224, 0.2);
+}
+
+.info-box h3 {
+    color: #4c6d4f;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.info-box p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Social Links Section */
+#social {
+    padding: 60px 40px;
+    background-color: #999a81;
+    text-align: center;
+    color: white;
+}
+
+#social h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #C9A961;
+    transform: scale(1.1);
+}
+
+.social-link.facebook:hover {
+    background-color: #3b5998;
+}
+
+.social-link.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* Responsive Design for new sections */
+@media (max-width: 1024px) {
+    .info-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #about,
+    #info,
+    #social {
+        padding: 40px 20px;
+    }
+
+    #about h2,
+    #social h2 {
+        font-size: 1.8rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    .info-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .info-box {
+        padding: 25px 20px;
+    }
+
+    .info-box h3 {
+        font-size: 1.1rem;
+    }
+
+    .info-box p {
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        gap: 20px;
+    }
+
+    .social-link {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+.event-date {
+    color: #999a81;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.event-location {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.event-description {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.event-item .cta-button {
+    margin-top: 0;
+    display: inline-block;
+}
+
+/* Allways Bridal Section */
+#allways-bridal {
+    padding: 60px 40px;
+    background-color: #e8e5e0;
+    text-align: center;
+}
+
+#allways-bridal h2 {
+    color: #3f2a4c;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.bridal-intro {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.bridal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.bridal-description {
+    text-align: left;
+}
+
+.bridal-description h3 {
+    color: #3f2a4c;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.bridal-description h3:first-child {
+    margin-top: 0;
+}
+
+.bridal-description p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.bridal-features {
+    list-style: none;
+    text-align: left;
+}
+
+.bridal-features li {
+    color: #555;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.bridal-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8aa685;
+    font-weight: bold;
+}
+
+.bridal-services {
+    text-align: center;
+}
+
+.bridal-services h3 {
+    color: #3f2a4c;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(232, 229, 224, 0.2);
+}
+
+.service-card h4 {
+    color: #3f2a4c;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.bridal-cta {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bridal-cta h3 {
+    color: #3f2a4c;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.bridal-cta p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* Allways Bridal — Buttons (scoped to this section only) */
+#allways-bridal .cta-button,
+#allways-bridal button {
+    background-color: #b07aaa;
+    color: #ffffff;
+    border: 2px solid #b07aaa;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease;
+}
+
+#allways-bridal .cta-button:hover,
+#allways-bridal button:hover {
+    background-color: #3f2a4c;
+    color: #f2e9dc;
+    transform: translateY(-2px);
+}
+
+/* Secondary / outline style within Allways Bridal */
+#allways-bridal .btn-secondary,
+#allways-bridal .cta-button.secondary {
+    background: transparent;
+    color: #3f2a4c;
+    border: 2px solid #3f2a4c;
+}
+
+#allways-bridal .btn-secondary:hover,
+#allways-bridal .cta-button.secondary:hover {
+    background: #bec1b9;
+    color: #3f2a4c;
+}
+
+/* Service card hover accent inside Allways Bridal */
+#allways-bridal .service-card:hover {
+    box-shadow: 0 8px 18px rgba(63,42,76,0.12);
+    border-color: #cdc0cb;
+}
+
+/* Allways Bridal — Social/Follow Us section (page-scoped) */
+body:has(#allways-bridal) #social {
+    background-color: #cdc0cb;
+    color: #3f2a4c;
+}
+
+body:has(#allways-bridal) #social h2 {
+    color: #3f2a4c;
+}
+
+body:has(#allways-bridal) .social-link {
+    background-color: rgba(63, 42, 76, 0.2);
+    color: #3f2a4c;
+}
+
+body:has(#allways-bridal) .social-link:hover {
+    background-color: #b07aaa;
+    color: #f2e9dc;
+}
+
+/* Responsive adjustments for Events and Allways */
+@media (max-width: 1024px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bridal-content {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #events,
+    #allways-bridal {
+        padding: 30px 20px;
+    }
+
+    #events h2,
+    #allways-bridal h2 {
+        font-size: 1.8rem;
+    }
+
+    .bridal-intro {
+        font-size: 1rem;
+    }
+
+    .bridal-content,
+    .bridal-cta {
+        padding: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-item {
+        padding: 20px;
+    }
+
+.event-header h3 {
+    font-size: 1.2rem;
+    }
+}

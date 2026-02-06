@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dress2MyDoor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">D2MD</a></li>
+                <li><a href="gallerypage.html">Gallery</a></li>
+                <li><a href="eventspage.html">Events</a></li>
+                <li><a href="allwaysbridalpage.html">Allways Bridal</a></li>
+                <li><a href="contactpage.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p class="contact-intro">Have questions? We'd love to hear from you. Get in touch with us today!</p>
+
+                <!-- Booking System -->
+                <div class="booking-container">
+                    <h3>Book an Appointment</h3>
+                    <p class="booking-intro">Select a time slot below to schedule your dress viewing or fitting appointment.</p>
+            
+                    <form id="booking-form">
+                        <label for="booking-name">Your Name</label>
+                        <input type="text" id="booking-name" name="booking-name" required>
+
+                        <label for="booking-email">Your Email</label>
+                        <input type="email" id="booking-email" name="booking-email" required>
+
+                        <label for="booking-phone">Your Phone</label>
+                        <input type="tel" id="booking-phone" name="booking-phone" required>
+
+                        <label for="booking-date">Select Date</label>
+                        <input type="date" id="booking-date" name="booking-date" required>
+
+                        <label>Select Time Slot - Monday to Friday</label>
+                        <div class="time-slots" id="time-slots">
+                            <button type="button" class="time-slot-btn" data-time="17:00">5:00 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="17:30">5:30 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="18:00">6:00 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="18:30">6:30 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="19:00">7:00 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="19:30">7:30 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="20:00">8:00 PM</button>
+                        </div>
+                        <input type="hidden" id="selected-time" name="selected-time" required>
+
+                        <label>Select Time Slot - Saturday and Sunday</label>
+                        <div class="time-slots" id="time-slots">
+                            <button type="button" class="time-slot-btn" data-time="17:00">10:00 AM</button>
+                            <button type="button" class="time-slot-btn" data-time="17:30">10:30 AM</button>
+                            <button type="button" class="time-slot-btn" data-time="18:00">11:00 AM</button>
+                            <button type="button" class="time-slot-btn" data-time="18:30">11:30 AM</button>
+                            <button type="button" class="time-slot-btn" data-time="19:00">12:00 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="19:30">12:30 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="20:00">1:00 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="20:30">1:30 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="21:00">2:00 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="21:30">2:30 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="22:00">3:00 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="22:30">3:30 PM</button>
+                            <button type="button" class="time-slot-btn" data-time="23:00">4:00 PM</button>
+                        </div>
+                        <input type="hidden" id="selected-time" name="selected-time" required>
+
+                        <label for="booking-message">Additional Notes</label>
+                        <textarea id="booking-message" name="booking-message" placeholder="Tell us what type of dress you're looking for..."></textarea>
+
+                        <button type="submit" class="booking-submit">Request Booking</button>
+                    </form>
+                </div>
+
+        <form id="contact-form" method="post" action="/submit-contact">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Your Phone</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required placeholder="Tell us about your dress needs..."></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
